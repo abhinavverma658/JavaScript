@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h2>Find max from 2 numbers:</h2>
+    <button onclick="myinput()">Enter First number</button>
+    <button onclick="mysecondinput()">Enter Second number</button>
+    <button onclick="cal()">Find max</button>
+    <script>
+         var first_number ;
+         var second_number;
+        function myinput(){
+            first_number = prompt("Enter First number");
+        }
+        function mysecondinput(){
+            second_number=prompt("Enter Second Number");
+        }
+        function cal(){
+            if(parseInt(first_number)>parseInt(second_number)){
+                window.alert("First number is greater");
+            }
+            else{
+                window.alert("Second Number is greater");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pattern Printing</title>
+</head>
+<body>
+    <h1>Pattern Printing</h1>
+    <pre id="pattern"></pre>
+
+    <script>
+        // Initialize an empty string to store the pattern
+        let pattern = "";
+
+        // Define the number of rows for the pattern
+        const numRows = 5;
+
+        // Outer loop for rows
+        for (let i = numRows; i >= 1; i--) {
+            // Inner loop for printing '*' in each row
+            for (let j = 1; j <= i; j++) {
+                pattern += "*";
+            }
+            // Add a newline after each row
+            pattern += "\n";
+        }
+
+        // Display the pattern in the HTML element with id "pattern"
+        document.getElementById("pattern").textContent = pattern;
+    </script>
+</body>
+</html>

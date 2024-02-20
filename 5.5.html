@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of a Number</title>
+</head>
+<body>
+    <h1>Reverse of a Number</h1>
+    
+    <!-- Input for the number -->
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    
+    <!-- Button to calculate the reverse -->
+    <button onclick="calculateReverse()">Calculate Reverse</button>
+    
+    <!-- Display the reverse in another input field -->
+    <label for="reverseOutput">Reverse:</label>
+    <input type="text" id="reverseOutput" readonly>
+    
+    <script>
+        function calculateReverse() {
+            // Get the number from the input field
+            const number = document.getElementById('numberInput').value;
+            
+            // Check if the input is empty or not a number
+            if (number === '') {
+                alert('Please enter a number');
+                return;
+            }
+
+            // Convert the number to a string, reverse it, and display the result
+            const reverse = number.toString().split('').reverse().join('');
+            document.getElementById('reverseOutput').value = reverse;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of a Number</title>
+</head>
+<body>
+    <h1>Table of a Number</h1>
+    
+    <!-- Input for the number -->
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput">
+    
+    <!-- Button to generate the table -->
+    <button onclick="generateTable()">Generate Table</button>
+    
+    <!-- Display the table in a textarea -->
+    <textarea id="resultTextarea" rows="10" cols="40" readonly></textarea>
+
+    <script>
+        function generateTable() {
+            // Get the number from the input field
+            const number = parseInt(document.getElementById('numberInput').value);
+            
+            // Check if the input is a valid number
+            if (isNaN(number)) {
+                alert('Please enter a valid number');
+                return;
+            }
+
+            // Generate and display the table in the textarea
+            const resultTextarea = document.getElementById('resultTextarea');
+            resultTextarea.value = '';
+            for (let i = 1; i <= 10; i++) {
+                const row = `${number} x ${i} = ${number * i}\n`;
+                resultTextarea.value += row;
+            }
+        }
+    </script>
+</body>
+</html>
